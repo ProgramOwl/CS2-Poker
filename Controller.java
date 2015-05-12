@@ -8,13 +8,13 @@ public class Controller
 
    public static void main(String[] args){
       deck = new Deck();
-      //System.out.println(deck);
+      System.out.println(deck);
       hand1 = new Hand();
       hand2 = new Hand();
 
       dealHands(5);
-      //System.out.println(hand1);
-      //System.out.println(hand2);
+      System.out.println(hand1);
+      System.out.println(hand2);
 
       hand1.sortHand();
       hand2.sortHand();
@@ -27,11 +27,21 @@ public class Controller
    }
 
    public static void dealHands(int x){
-      //TODO: Deal x cards to each player
+      //TODO: Deal x cards to each player, Done
+      for(int i=0; i<x; i++)
+      {
+        hand1.add(deck.remove());
+        hand2.add(deck.remove());
+      }
    }
 
-   public static String findWinner(){
+   public static String findWinner(){//Done
       int result = hand1.compareTo(hand2);
-      return "TODO: Who wins?";
+      if(result>0)
+        return "You are the Winner!";
+      else if(result<0)
+        return "I win!";
+      else
+        return "It is a tie.";
    }
 }
