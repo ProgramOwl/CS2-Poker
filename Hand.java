@@ -36,13 +36,17 @@ public class Hand implements Comparable {
 
    public int score(){
      //chech for all card types listed above, How do you compare cards?
-    if(){//all one suit
-      if()//royal flush //inorder from 10 to A
-        return 1;
-      else if()//straight flush //inorder
-        return 2;
-      else//flush //not inorder
-        return 5;
+    if(){//inorder
+      if(){//all one suit
+        if()//royal flush //inorder from 10 to A
+          return 1;
+        else if()//straight flush //inorder
+          return 2;
+        else//flush //not inorder
+          return 5;
+      }
+      else//Straight //all inorder
+        return 6;
     }
     else if()//four of same #
       return 3;
@@ -52,8 +56,6 @@ public class Hand implements Comparable {
       else//Three of kind
         return 7;
     }
-    else if()//Straight //all inorder
-      return 6;
     else if(){//has set of two
       if()//two pair //also second set of two
         return 8;
