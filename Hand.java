@@ -100,7 +100,7 @@ public class Hand implements Comparable {
         return 1;
       else if(this.score()<other.score())
         return -1;
-      else{
+      else{//only errors when both have same lowest cards
         if(this.hand.get(0).value<other.hand.get(0).value)//could be improved but not sure as to how to check other than a tone of code/recursive
           return 1;
         else

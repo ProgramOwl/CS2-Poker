@@ -39,9 +39,7 @@ public class Controller
       int result = hand1.compareTo(hand2);
       if(result>0)
         return "You are the Winner!";
-      else if(result<0)
-        return "I win!";
       else
-        return "It is a tie.";
+        return "I win!";
    }
 }
