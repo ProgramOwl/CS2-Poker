@@ -100,6 +100,11 @@ public class Hand implements Comparable {
         return 1;
       else if(this.score()<other.score())
         return -1;
-      return 0;//TODO: Compare hands by ordering above; return -1, 1, or 0, Done
+      else{
+        if(this.hand.get(0).value<other.hand.get(0).value)//could be improved but not sure as to how to check other than a tone of code/recursive
+          return 1;
+        else
+          return -1;//TODO: Compare hands by ordering above; return -1, 1, or 0, Done
+      }
    }
 }
